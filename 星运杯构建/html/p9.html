@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 1080) {
+                        docEl.style.fontSize = '140px';
+                    } else {
+                        docEl.style.fontSize = 140 * (clientWidth / 1080) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="../css/p9.css">
+</head>
+
+<body>
+    <div class="p9">
+        <p class="p9_name">hsakahakhah</p>
+        <img class="p9_01" src="../img/p9_04.png" alt="">
+        <img class="p9_02" src="../img/p9_01.png" alt="">
+        <img class="p9_03" src="../img/p9_03.png" alt="">
+        <img class="p9_04" src="../img/p9_02.png" alt="">
+        <img class="p9_05" src="../img/p9_button.png" alt="">
+        <img class="p9_06" src="../img/p9_05.png" alt="">
+        <div class="p9_zhezhao"></div>
+        <!--填写信息栏-->
+        <div class="p9_zhezhao_tanc" style="display:none">
+            <img class="p9_zhezhao_tanc_close" src="../img/p9_tanc_close.png" alt="">
+            <div class="p9_zhezhao_tanc_div1">
+                <div class="p9_zhezhao_tanc_div1_01">
+                    <input name="sex" type="radio" id="man1">
+                    <label for="man1">甜品师</label>
+                </div>
+                <div class="p9_zhezhao_tanc_div1_02">
+                    <input name="sex" type="radio" id="man2">
+                    <label for="man2">经营管理者</label>
+                </div>
+            </div>
+            <div style="margin-top:6%" class="p9_zhezhao_tanc_div1">
+                <div class="p9_zhezhao_tanc_div1_01">
+                    <input name="sex" type="radio" id="man3">
+                    <label for="man3">饮品师</label>
+                </div>
+                <div class="p9_zhezhao_tanc_div1_02">
+                    <input name="sex" type="radio" id="man4">
+                    <label for="man4">其他</label>
+                </div>
+            </div>
+            <div style="margin-top:6%" class="p9_zhezhao_tanc_div1">
+                <div class="p9_zhezhao_tanc_div1_01">
+                    <input name="sex" type="radio" id="man5">
+                    <label for="man5">咖啡师</label>
+                </div>
+            </div>
+            <img class="p9_tanc_guajiang" src="../img/p9_tanc_guajiang.png" alt="">
+        </div>
+        <!--没有中奖-->
+        <div class="p9_tanch_mei_jiang" style="display:none">
+            <img class="p9_zhezhao_tanc_close" src="../img/p9_tanc_close.png" alt="">
+            <img class="p9_tanc_guajiang" src="../img/p9_tanc_guajiang.png" alt="">
+        </div>
+        <!--二次抽奖没中-->
+        <div class="p9_tanch_mei_jiang2" style="display:none">
+            <img class="p9_zhezhao_tanc_close" src="../img/p9_tanc_close.png" alt="">
+            <img class="p9_tanc_guajiang" src="../img/p9_tanc_guajiang.png" alt="">
+        </div>
+        <!--三次抽奖没中-->
+        <div class="p9_tanch_mei_jiang3">
+            <img style="top:4%" class="p9_zhezhao_tanc_close" src="../img/p9_tanc_close.png" alt="">
+        </div>
+        <img style="display:none" class="fenxiang" src="../img/fengxiang.png" alt="">
+    </div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el: ".p9",
+        data: {
+
+        },
+        methods: {
+
+        }
+    })
+</script>
+
+</html>

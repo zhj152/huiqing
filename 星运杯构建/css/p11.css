@@ -1,0 +1,157 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.p11 {
+    width: 100%;
+    height: 100%;
+    background: url("../img/p11_fanbu.jpg") no-repeat 0 0;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.p11 .p11_01 {
+    margin-top: 85%;
+    margin-left: 12%;
+    height: .8rem;
+    width: 75%;
+    background: url("../img/p11_div_username.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.p11 .p11_02 {
+    margin-top: 0%;
+    margin-left: 12%;
+    height: .8rem;
+    width: 75%;
+    background: url("../img/p11_div_phone.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.p11 .p11_03 {
+    margin-top: 0%;
+    margin-left: 12%;
+    height: .8rem;
+    width: 75%;
+    background: url("../img/p11_div_name.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.p11 .p11_04 {
+    margin-top: 0%;
+    margin-left: 12%;
+    height: .8rem;
+    width: 75%;
+    background: url("../img/p11_div_dizhi.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.p11 .p11_05 {
+    margin-top: -3%;
+    margin-left: 12%;
+    height: .8rem;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.p11 .p11_05 img {
+    width: 4.8rem;
+    margin-left: .2rem;
+}
+
+.p11 .p11_06 {
+    position: absolute;
+    top: 83%;
+    left: 37%;
+    width: 2rem;
+}
+
+.p11 input {
+    width: 2.6rem;
+    margin-left: 21%;
+    border: 0;
+    outline: none;
+    background-color: #fdc545;
+    color: #af6e1b;
+}
+
+.p11 .input_check {
+    position: absolute;
+    visibility: hidden;
+}
+
+.p11 .input_check+label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 3px solid #b56621;
+    position: relative;
+    margin-left: 3%;
+}
+
+.p11 .p9_tanch_mei_jiang {
+    position: relative;
+    top: -52%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    background: url(../img/mashang_fenxiang.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    z-index: 300;
+    overflow: hidden;
+}
+
+.p11 .p9_tanch_mei_jiang .p9_zhezhao_tanc_close {
+    position: absolute;
+    top: 12%;
+    left: 90%;
+    width: .4rem;
+}
+
+.p11 .p9_tanch_mei_jiang .p9_tanc_guajiang {
+    position: absolute;
+    top: 70%;
+    left: 27%;
+    width: 2.4rem;
+}
+
+.p11 .input_check:checked+label:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    /* bottom: -150px; */
+    top: -4px;
+    width: 11px;
+    height: 1px;
+    border: 4px solid #b56621;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    -ms-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-45deg);
+}

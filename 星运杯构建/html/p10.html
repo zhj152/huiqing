@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 1080) {
+                        docEl.style.fontSize = '140px';
+                    } else {
+                        docEl.style.fontSize = 140 * (clientWidth / 1080) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="../css/p10.css">
+</head>
+
+<body>
+    <div class="p10">
+        <img class="p10_01" src="../img/p10_button.png" alt="">
+        <img class="p10_02" src="../img/p10_caom.jpg" alt="">
+    </div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el: ".p10",
+        data: {
+
+        },
+        methods: {
+
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 1080) {
+                        docEl.style.fontSize = '140px';
+                    } else {
+                        docEl.style.fontSize = 140 * (clientWidth / 1080) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="../css/p7.css">
+</head>
+
+<body>
+    <div class="p7" @touchstart='touchStart' @touchmove='touchMove' @touchend='touchEnd'>
+        <img class="p7_01" src="../img/p7_01.png" alt="">
+        <img class="p7_02" ref="p7_img1" src="../img/p7_02.png" @touchmove='touchMoveimg1_1' @touchend='touchEndimg1_1' alt="">
+        <img class="p7_03" ref="p7_img3" src="../img/p7_03.png" @touchmove='touchMoveimg3_1' @touchend='touchEndimg3_1' alt="">
+        <img class="p7_04" ref="p7_img2" src="../img/p7_04.png" @touchmove='touchMoveimg2_1' @touchend='touchEndimg2_1' alt="">
+    </div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el: ".p7",
+        data: {
+            startX: 0,
+            startY: 0,
+            moveX: 0,
+            moveY: 0,
+            endX: 0,
+            endY: 0,
+        },
+        methods: {
+            touchStart: function(ev) {
+                ev = ev || event;
+                ev.preventDefault();
+                if (ev.touches.length == 1) { //tounches类数组，等于1时表示此时有只有一只手指在触摸屏幕
+                    this.startX = ev.touches[0].clientX; // 记录开始位置
+                    this.startY = ev.touches[0].clientY;
+                }
+            },
+            touchMove: function(ev) {
+                ev = ev || event;
+                ev.preventDefault();
+                if (ev.touches.length == 1) { //tounches类数组，等于1时表示此时有只有一只手指在触摸屏幕
+                    this.moveX = ev.touches[0].clientX; // 记录开始位置
+                    this.moveY = ev.touches[0].clientY;
+                }
+            },
+
+            touchMoveimg1_1: function(ev) {
+                this.$refs.p7_img1.style.top = this.moveY - 50 + 'px';
+                this.$refs.p7_img1.style.left = this.moveX - 50 + 'px'
+            },
+            touchMoveimg2_1: function(ev) {
+                this.$refs.p7_img2.style.top = this.moveY - 50 + 'px';
+                this.$refs.p7_img2.style.left = this.moveX - 50 + 'px'
+            },
+            touchMoveimg3_1: function(ev) {
+                this.$refs.p7_img3.style.top = this.moveY - 50 + 'px';
+                this.$refs.p7_img3.style.left = this.moveX - 50 + 'px'
+            },
+            touchEnd: function(ev) {
+                ev = ev || event;
+                ev.preventDefault();
+                if (ev.touches.length == 1) { //tounches类数组，等于1时表示此时有只有一只手指在触摸屏幕
+                    this.endX = ev.touches[0].clientX; // 记录开始位置
+                    this.endY = ev.touches[0].clientY;
+                }
+            },
+            touchEndimg1_1: function(ev) {
+                if (this.moveY < 440 || this.moveY > 550 || this.moveX < 92 || this.moveX > 180) {
+                    this.$refs.p7_img1.style.top = 22 + '%';
+                    this.$refs.p7_img1.style.left = 33 + '%'
+                }
+                if (this.moveY > 440 && this.moveY < 550 && this.moveX > 92 && this.moveX < 180) {
+                    alert(1);
+                }
+            },
+            touchEndimg2_1: function(ev) {
+                if (this.moveY < 440 || this.moveY > 550 || this.moveX < 92 || this.moveX > 180) {
+                    this.$refs.p7_img2.style.top = 36 + '%';
+                    this.$refs.p7_img2.style.left = 13 + '%'
+                }
+                if (this.moveY > 440 && this.moveY < 550 && this.moveX > 92 && this.moveX < 180) {
+                    alert(2);
+                }
+
+            },
+            touchEndimg3_1: function(ev) {
+                if (this.moveY < 440 || this.moveY > 550 || this.moveX < 92 || this.moveX > 180) {
+                    this.$refs.p7_img3.style.top = 49 + '%';
+                    this.$refs.p7_img3.style.left = 30 + '%'
+                }
+                if (this.moveY > 440 && this.moveY < 550 && this.moveX > 92 && this.moveX < 180) {
+                    alert(3);
+                }
+
+            },
+        }
+    })
+</script>
+
+</html>

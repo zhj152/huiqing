@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 1080) {
+                        docEl.style.fontSize = '140px';
+                    } else {
+                        docEl.style.fontSize = 140 * (clientWidth / 1080) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="../css/p11.css">
+    <link rel="stylesheet" href="../css/p9.css">
+</head>
+
+<body>
+    <div class="p11">
+        <div class="p11_01"><input v-model="input1" type="text"></div>
+        <div class="p11_02"><input v-model="input2" type="number"></div>
+        <div class="p11_03"><input v-model="input3" type="text"></div>
+        <div class="p11_04"><input v-model="input4" type="text"></div>
+        <div class="p11_05">
+            <input type="checkbox" checked class="input_check" id="check3" name="check">
+            <label class="label_add" for="check3"></label>
+            <img src="../img/p11_text.png" alt="">
+        </div>
+        <img class="p11_06" src="../img/p11_button.png" alt="">
+        <div class="p9_zhezhao"></div>
+        <div class="p9_tanch_mei_jiang" style="display:none">
+            <img class="p9_zhezhao_tanc_close" src="../img/p9_tanc_close.png" alt="">
+            <img class="p9_tanc_guajiang" src="../img/p9_tanc_guajiang.png" alt="">
+        </div>
+        <img class="fenxiang" src="../img/fengxiang.png" alt="">
+    </div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el: ".p11",
+        data: {
+            input1: '',
+            input2: '',
+            input3: '',
+            input4: ''
+        },
+        methods: {
+
+        }
+    })
+</script>
+
+</html>

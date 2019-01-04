@@ -1,0 +1,1360 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    background: url("../img/index_back1.jpg") no-repeat 0 0;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.body .cup {
+    position: relative;
+    padding-left: 1rem;
+    animation: big_cup 3s, big_cup1 4s infinite 6s;
+    -moz-animation: big_cup 3s;
+    /* Firefox */
+    -webkit-animation: big_cup 3s, big_cup1 4s infinite 6s;
+    /* Safari 和 Chrome */
+    -o-animation: big_cup 3s;
+    left: 28%;
+    top: 14%;
+    height: 60%;
+}
+
+.body .cup_back {
+    position: absolute;
+    padding-left: 0.9rem;
+    top: 26%;
+    left: 2rem;
+    width: 4.8rem;
+}
+
+.body .cup .cup_top {
+    position: absolute;
+    top: 0.3rem;
+    left: 0%;
+    width: 5.2rem;
+    z-index: 20;
+    /*animation: cup_top_top 3s infinite 6s;*/
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    /*-moz-animation: cup_top_top 3s infinite 6s;*/
+    /* Firefox */
+    /*-webkit-animation: cup_top_top 3s infinite 6s;*/
+    /* Safari 和 Chrome */
+    /*-o-animation: cup_top_top 3s infinite 6s;*/
+}
+
+.body .cup .cup_center {
+    position: absolute;
+    top: 1.5rem;
+    left: 0.2rem;
+    width: 5.2rem;
+    z-index: 10;
+}
+
+.body .cup .cup_footer {
+    position: absolute;
+    top: 2.6rem;
+    left: 14%;
+    width: 5.6rem;
+    z-index: 8;
+    /*animation: cup_top_top1 3s infinite 6s;*/
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    /*-moz-animation: cup_top_top1 3s infinite 6s;*/
+    /* Firefox */
+    /*-webkit-animation: cup_top_top1 3s infinite 6s;*/
+    /* Safari 和 Chrome */
+    /*-o-animation: cup_top_top1 3s infinite 6s;*/
+}
+
+.body .cup .cup_top_01 {
+    position: absolute;
+    top: 1rem;
+    left: 0.5rem;
+    width: 4.2rem;
+    z-index: 16;
+}
+
+.body .cup .cup_top_02 {
+    position: absolute;
+    top: 24%;
+    left: 12%;
+    width: .6rem;
+    z-index: 14;
+    animation: cup_top_top2 6s infinite 6s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    -moz-animation: cup_top_top2 6s infinite 6s;
+    /* Firefox */
+    -webkit-animation: cup_top_top2 6s infinite 6s;
+    /* Safari 和 Chrome */
+    -o-animation: cup_top_top2 6s infinite 6s;
+}
+
+.body .cup .cup_top_03 {
+    position: absolute;
+    top: 22%;
+    left: 20%;
+    width: 0.8rem;
+    z-index: 15;
+    animation: cup_top_top3 6s infinite 6s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    -moz-animation: cup_top_top3 6s infinite 6s;
+    /* Firefox */
+    -webkit-animation: cup_top_top3 6s infinite 6s;
+    /* Safari 和 Chrome */
+    -o-animation: cup_top_top3 6s infinite 6s;
+}
+
+.body .cup .cup_top_04 {
+    position: absolute;
+    top: 18%;
+    left: 32%;
+    width: .6rem;
+    z-index: 14;
+    animation: cup_top_top4 6s infinite 6s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    -moz-animation: cup_top_top4 6s infinite 6s;
+    /* Firefox */
+    -webkit-animation: cup_top_top4 6s infinite 6s;
+    /* Safari 和 Chrome */
+    -o-animation: cup_top_top4 6s infinite 6s;
+}
+
+.body .cup .cup_top_05 {
+    position: absolute;
+    top: 12%;
+    left: 38%;
+    width: 1.4rem;
+    z-index: 15;
+    animation: cup_top_top5 6s infinite 6s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    -moz-animation: cup_top_top5 6s infinite 6s;
+    /* Firefox */
+    -webkit-animation: cup_top_top5 6s infinite 6s;
+    /* Safari 和 Chrome */
+    -o-animation: cup_top_top5 6s infinite 6s;
+}
+
+.body .rule_01 {
+    font-size: .3rem;
+    color: #b2815c;
+    margin-left: 86%;
+    margin-top: .4rem;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+}
+
+.body .rule_02 {
+    font-size: .3rem;
+    color: #b2815c;
+    margin-left: 78%;
+    margin-top: .1rem;
+    letter-spacing: 2px;
+}
+
+.body .absulate_img01 {
+    position: absolute;
+    top: .8rem;
+    left: 62%;
+    width: .7rem;
+    animation: xiao_01 3s infinite 5s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    -moz-animation: xiao_01 3s infinite 5s;
+    /* Firefox */
+    -webkit-animation: xiao_01 3s infinite 5s;
+    /* Safari 和 Chrome */
+    -o-animation: xiao_01 3s infinite 5s;
+}
+
+.body .absulate_img02 {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    width: .6rem;
+    animation: xiao_02 3s infinite 5s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    -moz-animation: xiao_02 3s infinite 5s;
+    /* Firefox */
+    -webkit-animation: xiao_02 3s infinite 5s;
+    /* Safari 和 Chrome */
+    -o-animation: xiao_02 3s infinite 5s;
+}
+
+.body .absulate_img03 {
+    position: absolute;
+    top: 21%;
+    left: 72%;
+    width: .9rem;
+    animation: xiao_03 3s infinite 5s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    -moz-animation: xiao_03 3s infinite 5s;
+    /* Firefox */
+    -webkit-animation: xiao_03 3s infinite 5s;
+    /* Safari 和 Chrome */
+    -o-animation: xiao_03 3s infinite 5s;
+}
+
+.body .absulate_img04 {
+    position: absolute;
+    top: 23%;
+    left: 84%;
+    width: 1.2rem;
+    animation: xiao_04 3s infinite 5s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    -moz-animation: xiao_04 3s infinite 5s;
+    /* Firefox */
+    -webkit-animation: xiao_04 3s infinite 5s;
+    /* Safari 和 Chrome */
+    -o-animation: xiao_04 3s infinite 5s;
+}
+
+.body .absulate_img05 {
+    position: absolute;
+    top: 2.6rem;
+    left: 0%;
+    width: 2.4rem;
+    animation: sun 3s infinite 5s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    -moz-animation: sun 3s infinite 5s;
+    /* Firefox */
+    -webkit-animation: sun 3s infinite 5s;
+    /* Safari 和 Chrome */
+    -o-animation: sun 3s infinite 5s;
+}
+
+.body .absulate_img06 {
+    position: absolute;
+    top: 50%;
+    left: 17%;
+    width: .6rem;
+    animation: xiao_05 3s infinite 5s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    -moz-animation: xiao_05 3s infinite 5s;
+    /* Firefox */
+    -webkit-animation: xiao_05 3s infinite 5s;
+    /* Safari 和 Chrome */
+    -o-animation: xiao_05 3s infinite 5s;
+}
+
+.body .absulate_img07 {
+    position: absolute;
+    top: 56%;
+    left: 5%;
+    width: .7rem;
+    animation: xiao_06 3s infinite 5s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 3s;*/
+    -moz-animation: xiao_06 3s infinite 5s;
+    /* Firefox */
+    -webkit-animation: xiao_06 3s infinite 5s;
+    /* Safari 和 Chrome */
+    -o-animation: xiao_06 3s infinite 5s;
+}
+
+.body .absulate_img08 {
+    position: absolute;
+    bottom: .6rem;
+    left: 0%;
+    width: 3.6rem;
+    /*animation: big_cup_top01 50s;*/
+    /*-moz-animation: big_cup_top01 50s;*/
+    /* Firefox */
+    /*-webkit-animation: big_cup_top01 50s;*/
+    /* Safari 和 Chrome */
+    /*-o-animation: big_cup_top01 50s;*/
+}
+
+.body .absulate_img09 {
+    position: absolute;
+    top: -24%;
+    left: -5%;
+    width: 2.8rem;
+    animation: big_cup_top01 1s;
+    -moz-animation: big_cup_top01 1s;
+    /* Firefox */
+    -webkit-animation: big_cup_top01 1s;
+    /* Safari 和 Chrome */
+    -o-animation: big_cup_top01 1s;
+}
+
+.body .absulate_img10 {
+    position: absolute;
+    top: 2.2rem;
+    left: 33%;
+    width: .9rem;
+    animation: big_cup_top02 3s infinite 2s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 2s;*/
+    -moz-animation: big_cup_top02 3s infinite 2s;
+    /* Firefox */
+    -webkit-animation: big_cup_top02 3s infinite 2s;
+    /* Safari 和 Chrome */
+    -o-animation: big_cup_top02 3s infinite 2s;
+}
+
+.body .absulate_img11 {
+    position: absolute;
+    top: 2.8rem;
+    left: 43%;
+    width: 1.2rem;
+    animation: big_cup_top03 3s infinite 2s;
+    /*animation-iteration-count: infinite;
+    animation-delay: 2s;*/
+    -moz-animation: big_cup_top03 3s infinite 2s;
+    /* Firefox */
+    -webkit-animation: big_cup_top03 3s infinite 2s;
+    /* Safari 和 Chrome */
+    -o-animation: big_cup_top03 3s infinite 2s;
+}
+
+.body .absulate_img12 {
+    position: absolute;
+    bottom: 1rem;
+    left: 68%;
+    width: 1.4rem;
+    /* animation: big_cup_top03 3s; */
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    z-index: 30;
+}
+
+.body .absulate_img13 {
+    position: absolute;
+    top: 1rem;
+    left: 4%;
+    width: 1rem;
+}
+
+
+/*动画*/
+
+@keyframes big_cup {
+    0% {
+        left: -20%;
+        top: 41%;
+    }
+    100% {
+        left: 28%;
+        top: 14%;
+    }
+}
+
+@-moz-keyframes big_cup {
+    0% {
+        left: -20%;
+        top: 41%;
+    }
+    100% {
+        left: 28%;
+        top: 14%;
+    }
+}
+
+@-webkit-keyframes big_cup {
+    0% {
+        left: -20%;
+        top: 41%;
+    }
+    100% {
+        left: 28%;
+        top: 14%;
+    }
+}
+
+@-o-keyframes big_cup {
+    0% {
+        left: -20%;
+        top: 41%;
+    }
+    100% {
+        left: 28%;
+        top: 14%;
+    }
+}
+
+@keyframes big_cup1 {
+    0% {
+        transform: rotate(6deg);
+        -ms-transform: rotate(6deg);
+        -webkit-transform: rotate(6deg);
+        -o-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+    }
+    50% {
+        transform: rotate(-6deg);
+        -ms-transform: rotate(-6deg);
+        -webkit-transform: rotate(-6deg);
+        -o-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg);
+    }
+    75% {
+        transform: rotate(6deg);
+        -ms-transform: rotate(6deg);
+        -webkit-transform: rotate(6deg);
+        -o-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+}
+
+@-moz-keyframes big_cup1 {
+    0% {
+        transform: rotate(6deg);
+        -ms-transform: rotate(6deg);
+        -webkit-transform: rotate(6deg);
+        -o-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+    }
+    50% {
+        transform: rotate(-6deg);
+        -ms-transform: rotate(-6deg);
+        -webkit-transform: rotate(-6deg);
+        -o-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg);
+    }
+    75% {
+        transform: rotate(6deg);
+        -ms-transform: rotate(6deg);
+        -webkit-transform: rotate(6deg);
+        -o-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes big_cup1 {
+    0% {
+        transform: rotate(6deg);
+        -ms-transform: rotate(6deg);
+        -webkit-transform: rotate(6deg);
+        -o-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+    }
+    50% {
+        transform: rotate(-6deg);
+        -ms-transform: rotate(-6deg);
+        -webkit-transform: rotate(-6deg);
+        -o-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg);
+    }
+    75% {
+        transform: rotate(6deg);
+        -ms-transform: rotate(6deg);
+        -webkit-transform: rotate(6deg);
+        -o-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+}
+
+@-o-keyframes big_cup1 {
+    0% {
+        transform: rotate(6deg);
+        -ms-transform: rotate(6deg);
+        -webkit-transform: rotate(6deg);
+        -o-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+    }
+    50% {
+        transform: rotate(-6deg);
+        -ms-transform: rotate(-6deg);
+        -webkit-transform: rotate(-6deg);
+        -o-transform: rotate(-6deg);
+        -moz-transform: rotate(-6deg);
+    }
+    75% {
+        transform: rotate(6deg);
+        -ms-transform: rotate(6deg);
+        -webkit-transform: rotate(6deg);
+        -o-transform: rotate(6deg);
+        -moz-transform: rotate(6deg);
+    }
+    100% {
+        transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+}
+
+@keyframes big_cup_top01 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes big_cup_top01 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes big_cup_top01 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes big_cup_top01 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes big_cup_top02 {
+    0% {
+        top: 2.2rem;
+        left: 33%;
+    }
+    100% {
+        top: 1.4rem;
+        left: 26%;
+    }
+}
+
+@-moz-keyframes big_cup_top02 {
+    0% {
+        top: 2.2rem;
+        left: 33%;
+    }
+    100% {
+        top: 1.4rem;
+        left: 26%;
+    }
+}
+
+@-webkit-keyframes big_cup_top02 {
+    0% {
+        top: 2.2rem;
+        left: 33%;
+    }
+    100% {
+        top: 1.4rem;
+        left: 26%;
+    }
+}
+
+@-o-keyframes big_cup_top02 {
+    0% {
+        top: 2.2rem;
+        left: 33%;
+    }
+    100% {
+        top: 1.4rem;
+        left: 26%;
+    }
+}
+
+@keyframes big_cup_top03 {
+    0% {
+        top: 2.8rem;
+        left: 43%;
+    }
+    100% {
+        top: 1.6rem;
+        left: 43%;
+    }
+}
+
+@-moz-keyframes big_cup_top03 {
+    0% {
+        top: 2.8rem;
+        left: 43%;
+    }
+    100% {
+        top: 1.6rem;
+        left: 43%;
+    }
+}
+
+@-webkit-keyframes big_cup_top03 {
+    0% {
+        top: 2.8rem;
+        left: 43%;
+    }
+    100% {
+        top: 1.6rem;
+        left: 43%;
+    }
+}
+
+@-o-keyframes big_cup_top03 {
+    0% {
+        top: 2.8rem;
+        left: 43%;
+    }
+    100% {
+        top: 1.6rem;
+        left: 43%;
+    }
+}
+
+
+/*小太阳*/
+
+@keyframes sun {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -6%;
+    }
+}
+
+@-moz-keyframes sun {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -6%;
+    }
+}
+
+@-webkit-keyframes sun {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -6%;
+    }
+}
+
+@-o-keyframes sun {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: -6%;
+    }
+}
+
+
+/*小飞碟*/
+
+@keyframes xiao_01 {
+    0% {
+        left: 62%;
+    }
+    100% {
+        left: 60%;
+    }
+}
+
+@-moz-keyframes xiao_01 {
+    0% {
+        left: 62%;
+    }
+    100% {
+        left: 60%;
+    }
+}
+
+@-webkit-keyframes xiao_01 {
+    0% {
+        left: 62%;
+    }
+    100% {
+        left: 60%;
+    }
+}
+
+@-o-keyframes xiao_01 {
+    0% {
+        left: 62%;
+    }
+    100% {
+        left: 60%;
+    }
+}
+
+@keyframes xiao_02 {
+    0% {
+        top: 20%;
+        left: 60%;
+    }
+    100% {
+        top: 18%;
+        left: 67%;
+    }
+}
+
+@-moz-keyframes xiao_02 {
+    0% {
+        top: 20%;
+        left: 60%;
+    }
+    100% {
+        top: 18%;
+        left: 67%;
+    }
+}
+
+@-webkit-keyframes xiao_02 {
+    0% {
+        top: 20%;
+        left: 60%;
+    }
+    100% {
+        top: 18%;
+        left: 67%;
+    }
+}
+
+@-o-keyframes xiao_02 {
+    0% {
+        top: 20%;
+        left: 60%;
+    }
+    100% {
+        top: 18%;
+        left: 67%;
+    }
+}
+
+@keyframes xiao_03 {
+    0% {
+        top: 21%;
+        left: 72%;
+    }
+    100% {
+        top: 19%;
+        left: 78%;
+    }
+}
+
+@-moz-keyframes xiao_03 {
+    0% {
+        top: 21%;
+        left: 72%;
+    }
+    100% {
+        top: 19%;
+        left: 78%;
+    }
+}
+
+@-webkit-keyframes xiao_03 {
+    0% {
+        top: 21%;
+        left: 72%;
+    }
+    100% {
+        top: 19%;
+        left: 78%;
+    }
+}
+
+@-o-keyframes xiao_03 {
+    0% {
+        top: 21%;
+        left: 72%;
+    }
+    100% {
+        top: 19%;
+        left: 78%;
+    }
+}
+
+@keyframes xiao_04 {
+    0% {
+        top: 23%;
+        left: 84%;
+    }
+    100% {
+        top: 21%;
+        left: 90%;
+    }
+}
+
+@-moz-keyframes xiao_04 {
+    0% {
+        top: 23%;
+        left: 84%;
+    }
+    100% {
+        top: 21%;
+        left: 90%;
+    }
+}
+
+@-webkit-keyframes xiao_04 {
+    0% {
+        top: 23%;
+        left: 84%;
+    }
+    100% {
+        top: 21%;
+        left: 90%;
+    }
+}
+
+@-o-keyframes xiao_04 {
+    0% {
+        top: 23%;
+        left: 84%;
+    }
+    100% {
+        top: 21%;
+        left: 90%;
+    }
+}
+
+@keyframes xiao_05 {
+    0% {
+        top: 50%;
+        left: 17%;
+    }
+    100% {
+        top: 52%;
+        left: 12%;
+    }
+}
+
+@-moz-keyframes xiao_05 {
+    0% {
+        top: 50%;
+        left: 17%;
+    }
+    100% {
+        top: 52%;
+        left: 12%;
+    }
+}
+
+@-webkit-keyframes xiao_05 {
+    0% {
+        top: 50%;
+        left: 17%;
+    }
+    100% {
+        top: 52%;
+        left: 12%;
+    }
+}
+
+@-o-keyframes xiao_05 {
+    0% {
+        top: 50%;
+        left: 17%;
+    }
+    100% {
+        top: 52%;
+        left: 12%;
+    }
+}
+
+@keyframes xiao_06 {
+    0% {
+        top: 56%;
+        left: 5%;
+    }
+    100% {
+        top: 54%;
+        left: 1%;
+    }
+}
+
+@-moz-keyframes xiao_06 {
+    0% {
+        top: 56%;
+        left: 5%;
+    }
+    100% {
+        top: 54%;
+        left: 1%;
+    }
+}
+
+@-webkit-keyframes xiao_06 {
+    0% {
+        top: 56%;
+        left: 5%;
+    }
+    100% {
+        top: 54%;
+        left: 1%;
+    }
+}
+
+@-o-keyframes xiao_06 {
+    0% {
+        top: 56%;
+        left: 5%;
+    }
+    100% {
+        top: 54%;
+        left: 1%;
+    }
+}
+
+
+/*杯子盖子*/
+
+@keyframes cup_top_top {
+    0% {
+        left: 1%;
+    }
+    50% {
+        left: -1%;
+    }
+    100% {
+        left: 1%;
+    }
+}
+
+@-moz-keyframes cup_top_top {
+    0% {
+        left: 1%;
+    }
+    50% {
+        left: -1%;
+    }
+    100% {
+        left: 1%;
+    }
+}
+
+@-webkit-keyframes cup_top_top {
+    0% {
+        left: 1%;
+    }
+    50% {
+        left: -1%;
+    }
+    100% {
+        left: 1%;
+    }
+}
+
+@-o-keyframes cup_top_top {
+    0% {
+        left: 1%;
+    }
+    50% {
+        left: -1%;
+    }
+    100% {
+        left: 1%;
+    }
+}
+
+
+/*杯子筒子*/
+
+@keyframes cup_top_top1 {
+    0% {
+        left: 13%;
+    }
+    50% {
+        left: 15%;
+    }
+    100% {
+        left: 13%;
+    }
+}
+
+@-moz-keyframes cup_top_top1 {
+    0% {
+        left: 13%;
+    }
+    50% {
+        left: 15%;
+    }
+    100% {
+        left: 13%;
+    }
+}
+
+@-webkit-keyframes cup_top_top1 {
+    0% {
+        left: 13%;
+    }
+    50% {
+        left: 15%;
+    }
+    100% {
+        left: 13%;
+    }
+}
+
+@-o-keyframes cup_top_top1 {
+    0% {
+        left: 13%;
+    }
+    50% {
+        left: 15%;
+    }
+    100% {
+        left: 13%;
+    }
+}
+
+@keyframes cup_top_top2 {
+    0% {
+        top: 26%;
+    }
+    25% {
+        top: 24%;
+    }
+    50% {
+        top: 26%;
+    }
+    100% {
+        top: 24%;
+    }
+}
+
+@-moz-keyframes cup_top_top2 {
+    0% {
+        top: 26%;
+    }
+    25% {
+        top: 24%;
+    }
+    50% {
+        top: 26%;
+    }
+    100% {
+        top: 24%;
+    }
+}
+
+@-webkit-keyframes cup_top_top2 {
+    0% {
+        top: 26%;
+    }
+    25% {
+        top: 24%;
+    }
+    50% {
+        top: 26%;
+    }
+    100% {
+        top: 24%;
+    }
+}
+
+@-o-keyframes cup_top_top2 {
+    0% {
+        top: 26%;
+    }
+    25% {
+        top: 24%;
+    }
+    50% {
+        top: 26%;
+    }
+    100% {
+        top: 24%;
+    }
+}
+
+@keyframes cup_top_top3 {
+    0% {
+        top: 20%;
+    }
+    25% {
+        top: 24%;
+    }
+    50% {
+        top: 20%;
+    }
+    100% {
+        top: 24%;
+    }
+}
+
+@-moz-keyframes cup_top_top3 {
+    0% {
+        top: 20%;
+    }
+    25% {
+        top: 24%;
+    }
+    50% {
+        top: 20%;
+    }
+    100% {
+        top: 24%;
+    }
+}
+
+@-webkit-keyframes cup_top_top3 {
+    0% {
+        top: 20%;
+    }
+    25% {
+        top: 24%;
+    }
+    50% {
+        top: 20%;
+    }
+    100% {
+        top: 24%;
+    }
+}
+
+@-o-keyframes cup_top_top3 {
+    0% {
+        top: 20%;
+    }
+    25% {
+        top: 24%;
+    }
+    50% {
+        top: 20%;
+    }
+    100% {
+        top: 24%;
+    }
+}
+
+@keyframes cup_top_top4 {
+    0% {
+        top: 16%;
+    }
+    25% {
+        top: 20%;
+    }
+    50% {
+        top: 16%;
+    }
+    100% {
+        top: 20%;
+    }
+}
+
+@-moz-keyframes cup_top_top4 {
+    0% {
+        top: 16%;
+    }
+    25% {
+        top: 20%;
+    }
+    50% {
+        top: 16%;
+    }
+    100% {
+        top: 20%;
+    }
+}
+
+@-webkit-keyframes cup_top_top4 {
+    0% {
+        top: 16%;
+    }
+    25% {
+        top: 20%;
+    }
+    50% {
+        top: 16%;
+    }
+    100% {
+        top: 20%;
+    }
+}
+
+@-o-keyframes cup_top_top4 {
+    0% {
+        top: 16%;
+    }
+    25% {
+        top: 20%;
+    }
+    50% {
+        top: 16%;
+    }
+    100% {
+        top: 20%;
+    }
+}
+
+@keyframes cup_top_top5 {
+    0% {
+        top: 10%;
+        left: 36%;
+    }
+    25% {
+        top: 14%;
+        left: 40%;
+    }
+    50% {
+        top: 10%;
+        left: 36%;
+    }
+    100% {
+        top: 14%;
+        left: 40%;
+    }
+}
+
+@-moz-keyframes cup_top_top5 {
+    0% {
+        top: 10%;
+        left: 36%;
+    }
+    25% {
+        top: 14%;
+        left: 40%;
+    }
+    50% {
+        top: 10%;
+        left: 36%;
+    }
+    100% {
+        top: 14%;
+        left: 40%;
+    }
+}
+
+@-webkit-keyframes cup_top_top5 {
+    0% {
+        top: 10%;
+        left: 36%;
+    }
+    25% {
+        top: 14%;
+        left: 40%;
+    }
+    50% {
+        top: 10%;
+        left: 36%;
+    }
+    100% {
+        top: 14%;
+        left: 40%;
+    }
+}
+
+@-o-keyframes cup_top_top5 {
+    0% {
+        top: 10%;
+        left: 36%;
+    }
+    25% {
+        top: 14%;
+        left: 40%;
+    }
+    50% {
+        top: 10%;
+        left: 36%;
+    }
+    100% {
+        top: 14%;
+        left: 40%;
+    }
+}
+
+
+/*适配*/
+
+@media only screen and (device-width: 375px) and (height: 724px) {
+    .body .cup {
+        top: 16% !important;
+    }
+    .body .absulate_img09 {
+        top: -20% !important;
+    }
+    @keyframes big_cup {
+        0% {
+            left: -20%;
+            top: 41%;
+        }
+        100% {
+            left: 28%;
+            top: 16%;
+        }
+    }
+    @-moz-keyframes big_cup {
+        0% {
+            left: -20%;
+            top: 41%;
+        }
+        100% {
+            left: 28%;
+            top: 16%;
+        }
+    }
+    @-webkit-keyframes big_cup {
+        0% {
+            left: -20%;
+            top: 41%;
+        }
+        100% {
+            left: 28%;
+            top: 16%;
+        }
+    }
+    @-o-keyframes big_cup {
+        0% {
+            left: -20%;
+            top: 41%;
+        }
+        100% {
+            left: 28%;
+            top: 16%;
+        }
+    }
+    .body .cup_back {
+        top: 26% !important;
+    }
+    .body .absulate_img08 {
+        bottom: 1.4rem !important;
+        left: 6% !important;
+    }
+    .body .absulate_img12 {
+        bottom: 2.8rem !important;
+        left: 72% !important;
+    }
+}

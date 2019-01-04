@@ -1,0 +1,52 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.prize {
+    width: 100%;
+    height: 100%;
+    background: url("../img/prize_back.jpg") no-repeat 0 0;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.prize .prize_img1 {
+    position: absolute;
+    top: 48%;
+    left: 52%;
+    width: 3.5rem;
+}
+
+.prize .prize_img2 {
+    position: absolute;
+    top: 16%;
+    left: 5%;
+    width: 3.5rem;
+}
+
+.prize .prize_img3 {
+    position: absolute;
+    top: 16%;
+    left: 52%;
+    width: 3.5rem;
+}
+
+.prize .prize_img4 {
+    position: absolute;
+    top: 48%;
+    left: 5%;
+    width: 3.5rem;
+}
+
+.prize .prize_img5 {
+    position: absolute;
+    top: 83%;
+    left: 32%;
+    width: 3rem;
+}

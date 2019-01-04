@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 1080) {
+                        docEl.style.fontSize = '140px';
+                    } else {
+                        docEl.style.fontSize = 140 * (clientWidth / 1080) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div class="body">
+        <!--文字部分-->
+        <p class="rule_01">规则</p>
+        <p class="rule_02">我的奖品</p>
+        <!--杯子部分-->
+        <!--阴影-->
+        <img src="../img/cup_back1.png" alt="" class="cup_back">
+        <div class="cup">
+
+            <!--头部-->
+            <img src="../img/cup_top.png" alt="" class="cup_top">
+            <!--头部水果-->
+            <img src="../img/cup_fruit.png" alt="" class="cup_top_01">
+            <img src="../img/01_Blackberry.png" alt="" class="cup_top_02">
+            <img src="../img/cup_top_02.png" alt="" class="cup_top_03">
+            <img src="../img/00_Raspberry.png" alt="" class="cup_top_04">
+            <img src="../img/cup_top_01.png" alt="" class="cup_top_05">
+            <!--中部-->
+            <img src="../img/cup_center.png" alt="" class="cup_center">
+            <!--底部-->
+            <img src="../img/cup_body.png" alt="" class="cup_footer">
+            <!--光束-->
+            <img src="../img/beam.png" alt="" class="absulate_img09">
+        </div>
+        <!--乱动的小星星-->
+        <img src="../img/bule1.png" alt="" class="absulate_img01">
+        <img src="../img/yoush1.png" alt="" class="absulate_img02">
+        <img src="../img/cook1.png" alt="" class="absulate_img03">
+        <img src="../img/pink1.png" alt="" class="absulate_img04">
+        <img src="../img/sun.png" alt="" class="absulate_img05">
+        <img src="../img/zuoxia3.png" alt="" class="absulate_img06">
+        <img src="../img/zuoxia2.png" alt="" class="absulate_img07">
+        <img src="../img/title1.png" alt="" class="absulate_img08">
+        <!--<img src="../img/光束.png" alt="" class="absulate_img09">-->
+        <img src="../img/zuosh2.png" alt="" class="absulate_img10">
+        <img src="../img/yellow_1.png" alt="" class="absulate_img11">
+        <img src="../img/p6_img3.png" alt="" class="absulate_img12">
+        <img src="../img/audio_img.png" alt="" class="absulate_img13">
+    </div>
+</body>
+<script src="../js/jquery-1.12.4.js"></script>
+<script>
+    $(function() {
+        $(".absulate_img10").hide();
+        $(".absulate_img11").hide();
+        $(".absulate_img09").hide();
+        $(".cup_back").hide();
+        $(".absulate_img08").hide();
+        $(".absulate_img12").hide();
+        setTimeout(function() {
+            $(".absulate_img10").fadeIn();
+            $(".absulate_img11").fadeIn();
+            $(".absulate_img09").fadeIn();
+            $(".cup_back").fadeIn();
+
+        }, 3000);
+        setTimeout(function() {
+            $(".absulate_img08").fadeIn();
+        }, 4000);
+    });
+
+    var status = 1;
+
+    function run() {
+
+        if (status == 1) {
+            $(".absulate_img12").fadeIn();
+            status = 0;
+        } else {
+            $(".absulate_img12").fadeOut();
+            status = 1;
+        }
+
+    }
+    setTimeout(function() {
+        $(".absulate_img12").show();
+        setInterval('run()', 1000);
+    }, 6000);
+</script>
+
+</html>

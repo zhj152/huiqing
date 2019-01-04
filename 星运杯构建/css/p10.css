@@ -1,0 +1,30 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.p10 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.p10 .p10_01 {
+    position: absolute;
+    bottom: 4%;
+    left: 40%;
+    width: 1.4rem;
+    z-index: 12;
+}
+
+.p10 .p10_02 {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}

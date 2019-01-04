@@ -1,0 +1,29 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.page01 {
+    width: 100%;
+    height: 100%;
+    background: url("../img/index_back1.jpg") no-repeat 0 0;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.page01 .page01_img1 {
+    width: 6.4rem;
+    margin-left: 8%;
+    margin-top: 12%;
+}
+
+.page01 .page01_img2 {
+    display: block;
+    width: 1.6rem;
+    margin-top: -1rem;
+    margin-left: 38%;
+}

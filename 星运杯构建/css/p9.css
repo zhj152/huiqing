@@ -1,0 +1,214 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.p9 {
+    width: 100%;
+    height: 100%;
+    background: url("../img/p9_back.jpg") no-repeat 0 0;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.p9 .p9_name {
+    position: absolute;
+    top: 6%;
+    left: 8%;
+    font-size: .6rem;
+    width: 2.2rem;
+    word-wrap: break-word;
+}
+
+.p9 .p9_01 {
+    position: absolute;
+    top: 28%;
+    left: 14%;
+    width: 3rem;
+}
+
+.p9 .p9_02 {
+    position: absolute;
+    top: 28%;
+    left: 45%;
+    width: 2rem;
+}
+
+.p9 .p9_03 {
+    position: absolute;
+    top: 61%;
+    left: 1%;
+    width: 7.6rem;
+}
+
+.p9 .p9_04 {
+    position: absolute;
+    top: 62.6%;
+    left: 54%;
+    width: 2.8rem;
+}
+
+.p9 .p9_05 {
+    position: absolute;
+    top: 75.6%;
+    left: 41%;
+    width: 4rem;
+    z-index: 100;
+}
+
+.p9 .p9_06 {
+    position: absolute;
+    top: 39%;
+    left: 56%;
+    width: 2rem;
+    z-index: 100;
+}
+
+.p9_zhezhao {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    z-index: 200;
+}
+
+.p9 .p9_zhezhao_tanc {
+    position: relative;
+    top: 28%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    background: url(../img/p9_tanc.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    z-index: 300;
+    overflow: hidden;
+}
+
+.p9 .p9_zhezhao_tanc .p9_zhezhao_tanc_close {
+    position: absolute;
+    top: 3%;
+    left: 90%;
+    width: .4rem;
+}
+
+.p9 .p9_zhezhao_tanc .p9_zhezhao_tanc_div1 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20%;
+    margin-left: 14%;
+}
+
+.p9 .p9_zhezhao_tanc .p9_zhezhao_tanc_div1 .p9_zhezhao_tanc_div1_02 {
+    margin-left: .8rem;
+}
+
+@font-face {
+    font-family: 'myFirstFont';
+    src: url('../font/zhanku.ttf');
+}
+
+.p9 .p9_zhezhao_tanc .p9_tanc_guajiang {
+    position: absolute;
+    top: 74%;
+    left: 34%;
+    width: 2.4rem;
+}
+
+.p9 .p9_tanch_mei_jiang {
+    position: relative;
+    top: 28%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    background: url(../img/p9_tanch_mei_jiang.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    z-index: 300;
+    overflow: hidden;
+}
+
+.p9 .p9_tanch_mei_jiang2 {
+    position: relative;
+    top: 28%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    background: url(../img/p9_tanch_mei_jiang2.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    z-index: 300;
+    overflow: hidden;
+}
+
+.p9 .p9_tanch_mei_jiang3 {
+    position: relative;
+    top: 28%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+    background: url(../img/p9_tanch_mei_jiang3.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    z-index: 300;
+    overflow: hidden;
+}
+
+.p9 .p9_zhezhao_tanc_close {
+    position: absolute;
+    top: 12%;
+    left: 90%;
+    width: .4rem;
+}
+
+.p9 .p9_tanc_guajiang {
+    position: absolute;
+    top: 70%;
+    left: 27%;
+    width: 2.4rem;
+}
+
+.p9 .p9_zhezhao_tanc label {
+    position: relative;
+    top: 14px;
+    font-size: .4rem;
+    font-family: 'myFirstFont';
+    color: #885d37;
+    line-height: 16px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.fenxiang {
+    position: absolute;
+    top: 2%;
+    left: 22%;
+    width: 6rem;
+    z-index: 300;
+}
+
+.p9 .p9_zhezhao_tanc input[type="radio"] {
+    display: none;
+}
+
+.p9 .p9_zhezhao_tanc input[type='radio']+label:before {
+    display: inline-block;
+    content: '';
+    background: url('../img/p9_tanc_xuanz.png') no-repeat 0 0;
+    background-size: 100% 100%;
+    width: .4rem;
+    height: .4rem;
+    margin-right: .1rem;
+}
+
+.p9 .p9_zhezhao_tanc input[type='radio']:checked+label:before {
+    background: url('../img/p9_tanc_meixuanz.png') no-repeat 0 0;
+    background-size: 100% 100%;
+    width: .4rem;
+    height: .4rem;
+}

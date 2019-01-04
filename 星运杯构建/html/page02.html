@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 1080) {
+                        docEl.style.fontSize = '140px';
+                    } else {
+                        docEl.style.fontSize = 140 * (clientWidth / 1080) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="../css/page02.css">
+</head>
+
+<body>
+    <div class="page02">
+        <img class="page02_top" :src="img_top" alt="">
+        <!--上面的星座-->
+        <img :class="img_data[0].class" :src="img_data[0].ssrc" @click="click_01" alt="">
+        <img :class="img_data[1].class" :src="img_data[1].ssrc" @click="click_02" alt="">
+        <img :class="img_data[2].class" :src="img_data[2].ssrc" @click="click_03" alt="">
+        <img :class="img_data[3].class" :src="img_data[3].ssrc" @click="click_04" alt="">
+        <img :class="img_data[4].class" :src="img_data[4].ssrc" @click="click_05" alt="">
+        <img :class="img_data[5].class" :src="img_data[5].ssrc" @click="click_06" alt="">
+        <!--下面的星座-->
+        <img :class="img_data[6].class" :src="img_data[6].ssrc" @click="click_07" alt="">
+        <img :class="img_data[7].class" :src="img_data[7].ssrc" @click="click_08" alt="">
+        <img :class="img_data[8].class" :src="img_data[8].ssrc" @click="click_09" alt="">
+        <img :class="img_data[9].class" :src="img_data[9].ssrc" @click="click_10" alt="">
+        <img :class="img_data[10].class" :src="img_data[10].ssrc" @click="click_11" alt="">
+        <img :class="img_data[11].class" :src="img_data[11].ssrc" @click="click_12" alt="">
+        <!--下面按钮-->
+        <img class="page02_bottom" src="../img/button.png" alt="">
+    </div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: ".page02",
+        data: {
+            //   上面的图片
+            img_top: "../img/constellation_top/constellation_top13.png",
+            img_data: [{
+                class: "page02_12_01_d",
+                ssrc: "../img/constellation_top/constellation_top02.png"
+            }, {
+                class: "page02_12_02",
+                ssrc: "../img/constellation_top/constellation_top03.png"
+            }, {
+                class: "page02_12_03",
+                ssrc: "../img/constellation_top/constellation_top05.png"
+            }, {
+                class: "page02_12_04",
+                ssrc: "../img/constellation_top/constellation_top07.png"
+            }, {
+                class: "page02_12_05",
+                ssrc: "../img/constellation_top/constellation_top09.png"
+            }, {
+                class: "page02_12_06",
+                ssrc: "../img/constellation_top/constellation_top11.png"
+            }, {
+                class: "page02_12_07",
+                ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+            }, {
+                class: "page02_12_08",
+                ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+            }, {
+                class: "page02_12_09",
+                ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+            }, {
+                class: "page02_12_10",
+                ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+            }, {
+                class: "page02_12_11",
+                ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+            }, {
+                class: "page02_12_12",
+                ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+            }],
+        },
+        methods: {
+            click_01: function() {
+                var img_data_new = [{
+                    class: "page02_12_01",
+                    ssrc: "../img/constellation_top/constellation_top01.png"
+                }, {
+                    class: "page02_12_02",
+                    ssrc: "../img/constellation_top/constellation_top03.png"
+                }, {
+                    class: "page02_12_03",
+                    ssrc: "../img/constellation_top/constellation_top05.png"
+                }, {
+                    class: "page02_12_04",
+                    ssrc: "../img/constellation_top/constellation_top07.png"
+                }, {
+                    class: "page02_12_05",
+                    ssrc: "../img/constellation_top/constellation_top09.png"
+                }, {
+                    class: "page02_12_06",
+                    ssrc: "../img/constellation_top/constellation_top11.png"
+                }, {
+                    class: "page02_12_07",
+                    ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+                }, {
+                    class: "page02_12_08",
+                    ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+                }, {
+                    class: "page02_12_09",
+                    ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+                }, {
+                    class: "page02_12_10",
+                    ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+                }, {
+                    class: "page02_12_11",
+                    ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+                }, {
+                    class: "page02_12_12",
+                    ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+                }];
+                this.img_data = img_data_new;
+                this.img_data[0].class = "page02_12_01_d";
+                this.img_data[0].ssrc = "../img/constellation_top/constellation_top02.png";
+                this.img_top = "../img/constellation_top/constellation_top13.png";
+            },
+            click_02: function() {
+                var img_data_new = [{
+                    class: "page02_12_01",
+                    ssrc: "../img/constellation_top/constellation_top01.png"
+                }, {
+                    class: "page02_12_02",
+                    ssrc: "../img/constellation_top/constellation_top03.png"
+                }, {
+                    class: "page02_12_03",
+                    ssrc: "../img/constellation_top/constellation_top05.png"
+                }, {
+                    class: "page02_12_04",
+                    ssrc: "../img/constellation_top/constellation_top07.png"
+                }, {
+                    class: "page02_12_05",
+                    ssrc: "../img/constellation_top/constellation_top09.png"
+                }, {
+                    class: "page02_12_06",
+                    ssrc: "../img/constellation_top/constellation_top11.png"
+                }, {
+                    class: "page02_12_07",
+                    ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+                }, {
+                    class: "page02_12_08",
+                    ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+                }, {
+                    class: "page02_12_09",
+                    ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+                }, {
+                    class: "page02_12_10",
+                    ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+                }, {
+                    class: "page02_12_11",
+                    ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+                }, {
+                    class: "page02_12_12",
+                    ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+                }];
+                this.img_data = img_data_new;
+                this.img_data[1].class = "page02_12_02_d";
+                this.img_data[1].ssrc = "../img/constellation_top/constellation_top04.png";
+                this.img_top = "../img/constellation_top/constellation_top14.png";
+            },
+            click_03: function() {
+                var img_data_new = [{
+                    class: "page02_12_01",
+                    ssrc: "../img/constellation_top/constellation_top01.png"
+                }, {
+                    class: "page02_12_02",
+                    ssrc: "../img/constellation_top/constellation_top03.png"
+                }, {
+                    class: "page02_12_03",
+                    ssrc: "../img/constellation_top/constellation_top05.png"
+                }, {
+                    class: "page02_12_04",
+                    ssrc: "../img/constellation_top/constellation_top07.png"
+                }, {
+                    class: "page02_12_05",
+                    ssrc: "../img/constellation_top/constellation_top09.png"
+                }, {
+                    class: "page02_12_06",
+                    ssrc: "../img/constellation_top/constellation_top11.png"
+                }, {
+                    class: "page02_12_07",
+                    ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+                }, {
+                    class: "page02_12_08",
+                    ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+                }, {
+                    class: "page02_12_09",
+                    ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+                }, {
+                    class: "page02_12_10",
+                    ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+                }, {
+                    class: "page02_12_11",
+                    ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+                }, {
+                    class: "page02_12_12",
+                    ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+                }];
+                this.img_data = img_data_new;
+                this.img_data[2].class = "page02_12_03_d";
+                this.img_data[2].ssrc = "../img/constellation_top/constellation_top06.png";
+                this.img_top = "../img/constellation_top/constellation_top15.png";
+            },
+            click_04: function() {
+                var img_data_new = [{
+                    class: "page02_12_01",
+                    ssrc: "../img/constellation_top/constellation_top01.png"
+                }, {
+                    class: "page02_12_02",
+                    ssrc: "../img/constellation_top/constellation_top03.png"
+                }, {
+                    class: "page02_12_03",
+                    ssrc: "../img/constellation_top/constellation_top05.png"
+                }, {
+                    class: "page02_12_04",
+                    ssrc: "../img/constellation_top/constellation_top07.png"
+                }, {
+                    class: "page02_12_05",
+                    ssrc: "../img/constellation_top/constellation_top09.png"
+                }, {
+                    class: "page02_12_06",
+                    ssrc: "../img/constellation_top/constellation_top11.png"
+                }, {
+                    class: "page02_12_07",
+                    ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+                }, {
+                    class: "page02_12_08",
+                    ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+                }, {
+                    class: "page02_12_09",
+                    ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+                }, {
+                    class: "page02_12_10",
+                    ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+                }, {
+                    class: "page02_12_11",
+                    ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+                }, {
+                    class: "page02_12_12",
+                    ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+                }];
+                this.img_data = img_data_new;
+                this.img_data[3].class = "page02_12_04_d";
+                this.img_data[3].ssrc = "../img/constellation_top/constellation_top08.png";
+                this.img_top = "../img/constellation_top/constellation_top16.png";
+            },
+            click_05: function() {
+                var img_data_new = [{
+                    class: "page02_12_01",
+                    ssrc: "../img/constellation_top/constellation_top01.png"
+                }, {
+                    class: "page02_12_02",
+                    ssrc: "../img/constellation_top/constellation_top03.png"
+                }, {
+                    class: "page02_12_03",
+                    ssrc: "../img/constellation_top/constellation_top05.png"
+                }, {
+                    class: "page02_12_04",
+                    ssrc: "../img/constellation_top/constellation_top07.png"
+                }, {
+                    class: "page02_12_05",
+                    ssrc: "../img/constellation_top/constellation_top09.png"
+                }, {
+                    class: "page02_12_06",
+                    ssrc: "../img/constellation_top/constellation_top11.png"
+                }, {
+                    class: "page02_12_07",
+                    ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+                }, {
+                    class: "page02_12_08",
+                    ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+                }, {
+                    class: "page02_12_09",
+                    ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+                }, {
+                    class: "page02_12_10",
+                    ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+                }, {
+                    class: "page02_12_11",
+                    ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+                }, {
+                    class: "page02_12_12",
+                    ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+                }];
+                this.img_data = img_data_new;
+                this.img_data[4].class = "page02_12_05_d";
+                this.img_data[4].ssrc = "../img/constellation_top/constellation_top10.png";
+                this.img_top = "../img/constellation_top/constellation_top17.png";
+            },
+            click_06: function() {
+                var img_data_new = [{
+                    class: "page02_12_01",
+                    ssrc: "../img/constellation_top/constellation_top01.png"
+                }, {
+                    class: "page02_12_02",
+                    ssrc: "../img/constellation_top/constellation_top03.png"
+                }, {
+                    class: "page02_12_03",
+                    ssrc: "../img/constellation_top/constellation_top05.png"
+                }, {
+                    class: "page02_12_04",
+                    ssrc: "../img/constellation_top/constellation_top07.png"
+                }, {
+                    class: "page02_12_05",
+                    ssrc: "../img/constellation_top/constellation_top09.png"
+                }, {
+                    class: "page02_12_06",
+                    ssrc: "../img/constellation_top/constellation_top11.png"
+                }, {
+                    class: "page02_12_07",
+                    ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+                }, {
+                    class: "page02_12_08",
+                    ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+                }, {
+                    class: "page02_12_09",
+                    ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+                }, {
+                    class: "page02_12_10",
+                    ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+                }, {
+                    class: "page02_12_11",
+                    ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+                }, {
+                    class: "page02_12_12",
+                    ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+                }];
+                this.img_data = img_data_new;
+                this.img_data[5].class = "page02_12_06_d";
+                this.img_data[5].ssrc = "../img/constellation_top/constellation_top12.png";
+                this.img_top = "../img/constellation_top/constellation_top18.png";
+            },
+            click_07: function() {
+                var img_data_new = [{
+                    class: "page02_12_01",
+                    ssrc: "../img/constellation_top/constellation_top01.png"
+                }, {
+                    class: "page02_12_02",
+                    ssrc: "../img/constellation_top/constellation_top03.png"
+                }, {
+                    class: "page02_12_03",
+                    ssrc: "../img/constellation_top/constellation_top05.png"
+                }, {
+                    class: "page02_12_04",
+                    ssrc: "../img/constellation_top/constellation_top07.png"
+                }, {
+                    class: "page02_12_05",
+                    ssrc: "../img/constellation_top/constellation_top09.png"
+                }, {
+                    class: "page02_12_06",
+                    ssrc: "../img/constellation_top/constellation_top11.png"
+                }, {
+                    class: "page02_12_07",
+                    ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+                }, {
+                    class: "page02_12_08",
+                    ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+                }, {
+                    class: "page02_12_09",
+                    ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+                }, {
+                    class: "page02_12_10",
+                    ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+                }, {
+                    class: "page02_12_11",
+                    ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+                }, {
+                    class: "page02_12_12",
+                    ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+                }];
+                this.img_data = img_data_new;
+                this.img_data[6].class = "page02_12_07_d";
+                this.img_data[6].ssrc = "../img/constellation_bottom/constellation_bottom02.png";
+                this.img_top = "../img/constellation_bottom/constellation_bottom13.png";
+            },
+            click_08: function() {
+                var img_data_new = [{
+                    class: "page02_12_01",
+                    ssrc: "../img/constellation_top/constellation_top01.png"
+                }, {
+                    class: "page02_12_02",
+                    ssrc: "../img/constellation_top/constellation_top03.png"
+                }, {
+                    class: "page02_12_03",
+                    ssrc: "../img/constellation_top/constellation_top05.png"
+                }, {
+                    class: "page02_12_04",
+                    ssrc: "../img/constellation_top/constellation_top07.png"
+                }, {
+                    class: "page02_12_05",
+                    ssrc: "../img/constellation_top/constellation_top09.png"
+                }, {
+                    class: "page02_12_06",
+                    ssrc: "../img/constellation_top/constellation_top11.png"
+                }, {
+                    class: "page02_12_07",
+                    ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+                }, {
+                    class: "page02_12_08",
+                    ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+                }, {
+                    class: "page02_12_09",
+                    ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+                }, {
+                    class: "page02_12_10",
+                    ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+                }, {
+                    class: "page02_12_11",
+                    ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+                }, {
+                    class: "page02_12_12",
+                    ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+                }];
+                this.img_data = img_data_new;
+                this.img_data[7].class = "page02_12_08_d";
+                this.img_data[7].ssrc = "../img/constellation_bottom/constellation_bottom04.png";
+                this.img_top = "../img/constellation_bottom/constellation_bottom14.png";
+            },
+            click_09: function() {
+                var img_data_new = [{
+                    class: "page02_12_01",
+                    ssrc: "../img/constellation_top/constellation_top01.png"
+                }, {
+                    class: "page02_12_02",
+                    ssrc: "../img/constellation_top/constellation_top03.png"
+                }, {
+                    class: "page02_12_03",
+                    ssrc: "../img/constellation_top/constellation_top05.png"
+                }, {
+                    class: "page02_12_04",
+                    ssrc: "../img/constellation_top/constellation_top07.png"
+                }, {
+                    class: "page02_12_05",
+                    ssrc: "../img/constellation_top/constellation_top09.png"
+                }, {
+                    class: "page02_12_06",
+                    ssrc: "../img/constellation_top/constellation_top11.png"
+                }, {
+                    class: "page02_12_07",
+                    ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+                }, {
+                    class: "page02_12_08",
+                    ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+                }, {
+                    class: "page02_12_09",
+                    ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+                }, {
+                    class: "page02_12_10",
+                    ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+                }, {
+                    class: "page02_12_11",
+                    ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+                }, {
+                    class: "page02_12_12",
+                    ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+                }];
+                this.img_data = img_data_new;
+                this.img_data[8].class = "page02_12_09_d";
+                this.img_data[8].ssrc = "../img/constellation_bottom/constellation_bottom06.png";
+                this.img_top = "../img/constellation_bottom/constellation_bottom15.png";
+            },
+            click_10: function() {
+                var img_data_new = [{
+                    class: "page02_12_01",
+                    ssrc: "../img/constellation_top/constellation_top01.png"
+                }, {
+                    class: "page02_12_02",
+                    ssrc: "../img/constellation_top/constellation_top03.png"
+                }, {
+                    class: "page02_12_03",
+                    ssrc: "../img/constellation_top/constellation_top05.png"
+                }, {
+                    class: "page02_12_04",
+                    ssrc: "../img/constellation_top/constellation_top07.png"
+                }, {
+                    class: "page02_12_05",
+                    ssrc: "../img/constellation_top/constellation_top09.png"
+                }, {
+                    class: "page02_12_06",
+                    ssrc: "../img/constellation_top/constellation_top11.png"
+                }, {
+                    class: "page02_12_07",
+                    ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+                }, {
+                    class: "page02_12_08",
+                    ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+                }, {
+                    class: "page02_12_09",
+                    ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+                }, {
+                    class: "page02_12_10",
+                    ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+                }, {
+                    class: "page02_12_11",
+                    ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+                }, {
+                    class: "page02_12_12",
+                    ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+                }];
+                this.img_data = img_data_new;
+                this.img_data[9].class = "page02_12_10_d";
+                this.img_data[9].ssrc = "../img/constellation_bottom/constellation_bottom08.png";
+                this.img_top = "../img/constellation_bottom/constellation_bottom16.png";
+            },
+            click_11: function() {
+                var img_data_new = [{
+                    class: "page02_12_01",
+                    ssrc: "../img/constellation_top/constellation_top01.png"
+                }, {
+                    class: "page02_12_02",
+                    ssrc: "../img/constellation_top/constellation_top03.png"
+                }, {
+                    class: "page02_12_03",
+                    ssrc: "../img/constellation_top/constellation_top05.png"
+                }, {
+                    class: "page02_12_04",
+                    ssrc: "../img/constellation_top/constellation_top07.png"
+                }, {
+                    class: "page02_12_05",
+                    ssrc: "../img/constellation_top/constellation_top09.png"
+                }, {
+                    class: "page02_12_06",
+                    ssrc: "../img/constellation_top/constellation_top11.png"
+                }, {
+                    class: "page02_12_07",
+                    ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+                }, {
+                    class: "page02_12_08",
+                    ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+                }, {
+                    class: "page02_12_09",
+                    ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+                }, {
+                    class: "page02_12_10",
+                    ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+                }, {
+                    class: "page02_12_11",
+                    ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+                }, {
+                    class: "page02_12_12",
+                    ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+                }];
+                this.img_data = img_data_new;
+                this.img_data[10].class = "page02_12_11_d";
+                this.img_data[10].ssrc = "../img/constellation_bottom/constellation_bottom10.png";
+                this.img_top = "../img/constellation_bottom/constellation_bottom17.png";
+            },
+            click_12: function() {
+                var img_data_new = [{
+                    class: "page02_12_01",
+                    ssrc: "../img/constellation_top/constellation_top01.png"
+                }, {
+                    class: "page02_12_02",
+                    ssrc: "../img/constellation_top/constellation_top03.png"
+                }, {
+                    class: "page02_12_03",
+                    ssrc: "../img/constellation_top/constellation_top05.png"
+                }, {
+                    class: "page02_12_04",
+                    ssrc: "../img/constellation_top/constellation_top07.png"
+                }, {
+                    class: "page02_12_05",
+                    ssrc: "../img/constellation_top/constellation_top09.png"
+                }, {
+                    class: "page02_12_06",
+                    ssrc: "../img/constellation_top/constellation_top11.png"
+                }, {
+                    class: "page02_12_07",
+                    ssrc: "../img/constellation_bottom/constellation_bottom01.png"
+                }, {
+                    class: "page02_12_08",
+                    ssrc: "../img/constellation_bottom/constellation_bottom03.png"
+                }, {
+                    class: "page02_12_09",
+                    ssrc: "../img/constellation_bottom/constellation_bottom05.png"
+                }, {
+                    class: "page02_12_10",
+                    ssrc: "../img/constellation_bottom/constellation_bottom07.png"
+                }, {
+                    class: "page02_12_11",
+                    ssrc: "../img/constellation_bottom/constellation_bottom09.png"
+                }, {
+                    class: "page02_12_12",
+                    ssrc: "../img/constellation_bottom/constellation_bottom11.png"
+                }];
+                this.img_data = img_data_new;
+                this.img_data[11].class = "page02_12_12_d";
+                this.img_data[11].ssrc = "../img/constellation_bottom/constellation_bottom12.png";
+                this.img_top = "../img/constellation_bottom/constellation_bottom18.png";
+            },
+        }
+    })
+</script>
+
+</html>

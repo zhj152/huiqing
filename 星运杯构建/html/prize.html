@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 1080) {
+                        docEl.style.fontSize = '140px';
+                    } else {
+                        docEl.style.fontSize = 140 * (clientWidth / 1080) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="../css/prize.css">
+</head>
+
+<body>
+    <div class="prize">
+        <img class="prize_img1" src="../img/prize_01.png" alt="">
+        <img class="prize_img2" src="../img/prize_02.png" alt="">
+        <img class="prize_img3" src="../img/prize_03.png" alt="">
+        <img class="prize_img4" src="../img/prize_04.png" alt="">
+        <img class="prize_img5" src="../img/prize_button.png" alt="">
+    </div>
+</body>
+
+</html>
